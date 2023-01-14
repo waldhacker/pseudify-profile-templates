@@ -1,0 +1,13 @@
+.composer.lock
+.env
+!tests/mariadb/10.5/.env
+bin/
+pseudify
+pseudify.phar
+var/
+vendor/
+
+###> friendsofphp/php-cs-fixer ###
+/.php-cs-fixer.php
+/.php-cs-fixer.cache
+###< friendsofphp/php-cs-fixer ###
