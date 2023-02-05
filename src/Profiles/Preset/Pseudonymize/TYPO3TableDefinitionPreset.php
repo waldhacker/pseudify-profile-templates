@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /*
  * This file is part of the pseudify project
- * - (c) 2021 waldhacker UG (haftungsbeschränkt)
+ * - (c) 2022 waldhacker UG (haftungsbeschränkt)
  *
  * It is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License, either version 2
@@ -14,7 +14,7 @@ declare(strict_types=1);
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Waldhacker\Pseudify\Profiles\Preset\TYPO3\Pseudonymize;
+namespace Waldhacker\Pseudify\Profiles\Preset\Pseudonymize;
 
 use Egulias\EmailValidator\EmailValidator;
 use Egulias\EmailValidator\Validation\RFCValidation;
@@ -45,88 +45,88 @@ class TYPO3TableDefinitionPreset
         return TableDefinition::create(identifier: $identifier)
             ->addTable(table: 'be_users', columns: [
                 Column::create(identifier: 'username')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'username', processingIdentifier: 'use username')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'username', processingIdentifier: 'fake username')
                 ),
                 Column::create(identifier: 'password')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'argon2iPassword', processingIdentifier: 'use password')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'argon2iPassword', processingIdentifier: 'fake password')
                 ),
                 Column::create(identifier: 'email')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'safeEmail', processingIdentifier: 'use safeEmail')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'safeEmail', processingIdentifier: 'fake safeEmail')
                 ),
                 Column::create(identifier: 'realName')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'name', processingIdentifier: 'use name')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'name', processingIdentifier: 'fake name')
                 ),
                 Column::create(identifier: 'password_reset_token')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'argon2iPassword', processingIdentifier: 'use argon2iPassword')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'argon2iPassword', processingIdentifier: 'fake argon2iPassword')
                 ),
             ])
 
             ->addTable(table: 'fe_users', columns: [
                 Column::create(identifier: 'username')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'username', processingIdentifier: 'use username')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'username', processingIdentifier: 'fake username')
                 ),
                 Column::create(identifier: 'password')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'argon2iPassword', processingIdentifier: 'use argon2iPassword')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'argon2iPassword', processingIdentifier: 'fake argon2iPassword')
                 ),
                 Column::create(identifier: 'name')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'name', processingIdentifier: 'use name')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'name', processingIdentifier: 'fake name')
                 ),
                 Column::create(identifier: 'first_name')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'firstName', processingIdentifier: 'use firstName')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'firstName', processingIdentifier: 'fake firstName')
                 ),
                 Column::create(identifier: 'middle_name')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'firstName', processingIdentifier: 'use firstName')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'firstName', processingIdentifier: 'fake firstName')
                 ),
                 Column::create(identifier: 'last_name')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'lastName', processingIdentifier: 'use lastName')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'lastName', processingIdentifier: 'fake lastName')
                 ),
                 Column::create(identifier: 'address')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'address', processingIdentifier: 'use address')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'address', processingIdentifier: 'fake address')
                 ),
                 Column::create(identifier: 'telephone')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'phoneNumber', processingIdentifier: 'use phoneNumber')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'phoneNumber', processingIdentifier: 'fake phoneNumber')
                 ),
                 Column::create(identifier: 'fax')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'phoneNumber', processingIdentifier: 'use phoneNumber')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'phoneNumber', processingIdentifier: 'fake phoneNumber')
                 ),
                 Column::create(identifier: 'email')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'safeEmail', processingIdentifier: 'use safeEmail')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'safeEmail', processingIdentifier: 'fake safeEmail')
                 ),
                 Column::create(identifier: 'title')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'title', processingIdentifier: 'use title')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'title', processingIdentifier: 'fake title')
                 ),
                 Column::create(identifier: 'zip')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'postcode', processingIdentifier: 'use postcode')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'postcode', processingIdentifier: 'fake postcode')
                 ),
                 Column::create(identifier: 'city')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'city', processingIdentifier: 'use city')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'city', processingIdentifier: 'fake city')
                 ),
                 Column::create(identifier: 'www')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'url', processingIdentifier: 'use url')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'url', processingIdentifier: 'fake url')
                 ),
                 Column::create(identifier: 'company')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'company', processingIdentifier: 'use company')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'company', processingIdentifier: 'fake company')
                 ),
                 Column::create(identifier: 'felogin_forgotHash')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'argon2iPassword', processingIdentifier: 'use argon2iPassword')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'argon2iPassword', processingIdentifier: 'fake argon2iPassword')
                 ),
             ])
 
             ->addTable(table: 'sys_file_metadata', columns: [
                 Column::create(identifier: 'latitude')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'latitude', processingIdentifier: 'use latitude')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'latitude', processingIdentifier: 'fake latitude')
                 ),
                 Column::create(identifier: 'longitude')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'longitude', processingIdentifier: 'use longitude')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'longitude', processingIdentifier: 'fake longitude')
                 ),
                 Column::create(identifier: 'location_city')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'city', processingIdentifier: 'use city')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'city', processingIdentifier: 'fake city')
                 ),
             ])
 
             ->addTable(table: 'sys_lockedrecords', columns: [
                 Column::create(identifier: 'username')->addDataProcessing(
-                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'username', processingIdentifier: 'use username')
+                    dataProcessing: DataManipulatorPreset::scalarData(fakerFormatter: 'username', processingIdentifier: 'fake username')
                 ),
             ])
 
@@ -202,17 +202,7 @@ class TYPO3TableDefinitionPreset
 
             ->addTable(table: 'sys_log', columns: [
                 Column::create(identifier: 'IP')->addDataProcessing(
-                    dataProcessing: new DataProcessing(identifier: 'fake IPv4 / IPv6 addresses',
-                        processor: function (DataManipulatorContext $context): void {
-                            $ipData = $context->getProcessedData();
-
-                            if (false !== filter_var($ipData, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
-                                $context->setProcessedData(processedData: $context->fake(source: $ipData)->ipv6());
-                            } elseif (false !== filter_var($ipData, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
-                                $context->setProcessedData(processedData: $context->fake(source: $ipData)->ipv4());
-                            }
-                        }
-                    )
+                    dataProcessing: DataManipulatorPreset::ip(processingIdentifier: 'fake ip')
                 ),
                 Column::create(identifier: 'log_data', dataType: Column::DATA_TYPE_SERIALIZED)->addDataProcessing(
                     dataProcessing: new DataProcessing(identifier: 'fake IPv4 / IPv6 addresses',

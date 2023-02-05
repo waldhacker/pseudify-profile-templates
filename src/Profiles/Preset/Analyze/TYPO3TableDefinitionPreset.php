@@ -14,7 +14,7 @@ declare(strict_types=1);
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Waldhacker\Pseudify\Profiles\Preset\TYPO3\Analyze;
+namespace Waldhacker\Pseudify\Profiles\Preset\Analyze;
 
 use Waldhacker\Pseudify\Core\Processor\Processing\Analyze\TargetDataDecoderPreset;
 use Waldhacker\Pseudify\Core\Profile\Model\Analyze\TableDefinition;
@@ -39,8 +39,6 @@ class TYPO3TableDefinitionPreset
     public static function create(string $identifier = 'TYPO3'): TableDefinition
     {
         return TableDefinition::create(identifier: $identifier)
-            ->setTargetDataFrameCuttingLength(length: 0)
-
             // Add some data sources.
             // The data sources are used to find their contents in the rest of the database.
 

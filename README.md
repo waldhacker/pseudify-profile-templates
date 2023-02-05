@@ -1,10 +1,5 @@
 [![Code quality](https://github.com/waldhacker/pseudify-profile-templates/actions/workflows/code-quality.yml/badge.svg)](https://github.com/waldhacker/pseudify-profile-templates/actions/workflows/code-quality.yml)
 
-<h1>Work in progress</h1>
-<h2>Don't try this at home.</h2>
-
----
-
 **Pseudify** is a toolbox that helps you to pseudonymize database data.  
 You can find hidden personal data in your database and you can pseudonymize them.  
 
