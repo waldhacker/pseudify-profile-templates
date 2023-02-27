@@ -244,9 +244,9 @@ class TYPO3TableDefinitionPreset
                                 // \TYPO3\CMS\Backend\Authentication\PasswordReset::sendAmbiguousEmail
                                 (255 === (int) $row['type'] && 5 === (int) $row['action'] && 4 === (int) $row['error'])
                                 // \TYPO3\CMS\Backend\Authentication\PasswordReset::sendResetEmail
-                                (255 === (int) $row['type'] && 5 === (int) $row['action'] && 3 === (int) $row['error'])
+                                || (255 === (int) $row['type'] && 5 === (int) $row['action'] && 3 === (int) $row['error'])
                                 // \TYPO3\CMS\Backend\Authentication\PasswordReset::resetPassword
-                                (255 === (int) $row['type'] && 6 === (int) $row['action'] && 3 === (int) $row['error'])
+                                || (255 === (int) $row['type'] && 6 === (int) $row['action'] && 3 === (int) $row['error'])
                             ) {
                                 $node->replaceProperty(
                                     identifier: 'email',
